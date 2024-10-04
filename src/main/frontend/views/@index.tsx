@@ -18,7 +18,9 @@ export default function ContactView() {
 
             <Grid
                 items={contacts}
-                onActiveItemChanged={(e : GridActiveItemChangedEvent<Contact>) => setSelected(e.detail.value)}
+                onActiveItemChanged={(e : GridActiveItemChangedEvent<Contact>) => {
+                    setSelected(e.detail.value??undefined);
+                }}
                 selectedItems={selected ? [selected] : []}
             >
                 <GridColumn path="name"/>
