@@ -20,7 +20,7 @@ public class DbInit implements ApplicationRunner {
         for(int i=0; i<100; i++) {
             String name = firstNamess[(int) (Math.random()*firstNamess.length)] + " " + lastNames[(int) (Math.random()*lastNames.length)];
             String email= name.replace(" ", "").toLowerCase() + "@gmail.com";
-            String phone= "+216"+ (int) (Math.random() * 10000000);
+            String phone= "+216"+ (int) (Math.random() * 100000000);
             contactRepositiry.save(new Contact(name,email,phone));
         }
     }

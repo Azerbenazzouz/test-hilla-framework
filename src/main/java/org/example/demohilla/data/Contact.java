@@ -3,6 +3,8 @@ package org.example.demohilla.data;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,8 +18,9 @@ public class Contact {
     @Id
     @GeneratedValue
     private Long id;
-
+    @Size(min = 2, max = 255)
     private String name;
+    @Email
     private String email;
     private String phone;
 

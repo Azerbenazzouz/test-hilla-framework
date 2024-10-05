@@ -1,0 +1,19 @@
+[
+  {
+    "route": "",
+    "params": {},
+    "title": "Layout",
+    "children": [
+      {
+        "route": "",
+        "params": {},
+        "title": "Contact"
+      },
+      {
+        "route": "ai-chat",
+        "params": {},
+        "title": "Ai Chat"
+      }
+    ]
+  }
+]
